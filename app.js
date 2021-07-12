@@ -149,3 +149,49 @@ var render = function (data) {
   })
 }
 
+// handleSearch: To find out the book through any fields matching content.
+var handleSearch = function (event) {
+  console.log('clicked')
+  event.preventDefault();
+
+  // Get the search terms from the input field
+  const searchTerm = document.querySelector('#search').value
+  // console.log(searchTerm)
+  
+  // Tokenize the search terms and remove empty spaces
+  var tokens = searchTerm
+    .toLowerCase()
+    .split(' ')
+    .filter(function (token) {
+      return token.trim() !== '';
+    });
+  
+  if (tokens.length) {
+    
+    //  Create a regular expression of all the search terms
+    var searchTermRegex = new RegExp(tokens.join('|'), 'gim');
+    var filteredList = books.filter(function (book) {
+      
+      // Create a string of all object values
+      var bookString = '';
+      for (var key in book) {
+        if (book.hasOwnProperty(key) && book[key] !== '') {
+          bookString += book[key].toString().toLowerCase().trim() + ' ';
+        }
+      }
+      
+      // Return book objects where a match with the search regex if found
+      return bookString.match(searchTermRegex);
+    });
+    
+    // Render the search results
+    render(filteredList);
+  }
+};
+
+//Running the query through the IDs of search and Reset buttons.
+document.querySelector("#search-btn").addEventListener('click', handleSearch)
+document.querySelector("#reset-btn").addEventListener('click', function (event) {
+  event.preventDefault();
+  render(books);
+})
