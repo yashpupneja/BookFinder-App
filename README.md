@@ -24,4 +24,4 @@ The project is in reference with the Digital Product School Challenge where it i
 - Searching is handled in javascript file whereas the UI was created in SearchBook.html
 
 # Structure:
-![Structure]()
+![Structure](StructureGif.gif)
