@@ -20,6 +20,16 @@ div::after {
     z-index: -1;   
   }
 
+/* Styling for Introduction */
+.Intro-Content{
+  padding:15px;
+  font-size: 0.8res;
+  display: block;
+}
+.Intro-Content ul li{
+  margin-left: 10px; 
+}
+
 /* Button Modifications */
 .btn{
   position: absolute;
