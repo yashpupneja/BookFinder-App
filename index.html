@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <!--      Importing Stylesheet, Font-awesome , jquery      -->
+      <meta charset="utf-8">
+      <title>BookStore</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+    <div>
+      <!--      Sidebar      -->
+      <div class="btn">
+         <span class="fas fa-bars"></span>
+      </div>
+      <nav class="sidebar">
+         <div class="text">
+            BookStore
+         </div>
+         <ul>
+            <!--      Linking to each task      -->
+            <li class="active"><a href="#">Introduction</a></li>
+            <li><a href="#">Adding Book</a></li>
+            <li><a href="#">View All Books</a></li>
+            <li><a href="#">Search Book</a></li>
+         </ul>
+      </nav>
+      <div class="content">
+         <div class="header">
+            BookStore
+         </div>
+      </div>
+    </div>
+      <script>
+        // To toggle between the sidebar buttons with respective functionalities.
+         $('.btn').click(function(){
+           $(this).toggleClass("click");
+           $('.sidebar').toggleClass("show");
+         });
+           $('nav ul li').click(function(){
+             $(this).addClass("active").siblings().removeClass("active");
+           });
+      </script>
+   </body>
+</html>
