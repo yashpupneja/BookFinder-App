@@ -27,4 +27,4 @@ The project is in reference with the Digital Product School Challenge where it i
 ![Structure](StructureGif.gif)
 
 # Application View:
-You can view the application at [Netlify][https://cocky-fermat-87591d.netlify.app/]
+You can view the application at ![Netlify][https://cocky-fermat-87591d.netlify.app/]
