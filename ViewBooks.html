@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <!--        Importing Header Template         -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BookStore</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+  <style>
+    div::after {
+      content: "";
+      background: url(books.jpg) no-repeat center center fixed;
+      opacity: 0.1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;   
+  } 
+  </style>
+</head>
+<body>
+  <h1 class="display-4 text-center"><i class="fas fa-book-open"></i><span class="text-primary"><b>Book</span>Store</b></h1>
+  <div>
+      
+      <!--        importing table template         -->
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Published Date</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+  </div>
+
+  <!--        Displaying table logic shown in app.js file         -->
+  <script src="app.js"></script>
+
+  <!--        Importing Footer Template         -->
+  <h6><i class="fas fa-backward"></i><a href="index.html">Home Page</a></h1>
+</body>
+</html>
