@@ -22,3 +22,6 @@ The project is in reference with the Digital Product School Challenge where it i
 - Add a Book page linked with Dashboard. Javascript file made for the functionality logic to be added.
 - The table is used to display the contents of all the books in ViewBook.html.
 - Searching is handled in javascript file whereas the UI was created in SearchBook.html
+
+# Structure:
+![Structure](StructureGif.gif)
